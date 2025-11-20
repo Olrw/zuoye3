@@ -5,13 +5,9 @@
     <section class="content-header">
       <h1>
         CMDB资产管理系统
-        <small>it all starts here</small>
+        <small>it all hosts here</small>
       </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Examples</a></li>
-        <li class="active">Blank page</li>
-      </ol>
+
     </section>
 
     <!-- Main content -->
@@ -31,7 +27,30 @@
           </div>
         </div>
         <div class="box-body">
-          这是我们要显示资产信息列表的地方
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>主机名</th>
+                        <th>IP地址</th>
+                        <th>磁盘</th>
+                        <th>内存</th>
+                        <th>CPU</th>
+                        <th>描述</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for host in host_list %}
+                    <tr>
+                        <td>{{ host.hostname }}</td>
+                        <td>{{ host.ip }}</td>
+                        <td>{{ host.disk }}</td>
+                        <td>{{ host.mem }}</td>
+                        <td>{{ host.cpu }}</td>
+                        <td>{{ host.desc }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
         <!-- /.box-body -->
         <div class="box-footer">

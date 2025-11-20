@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [    
     path("", views.index, name="index"),
-    path("cmdb/", views.cmdb, name="cmdb"),
-    path("asset/<int:asset_id>/", views.asset, name="asset"),
+    #path("cmdb/", views.cmdb, name="cmdb"),
+    #path("asset/<int:asset_id>/", views.asset, name="asset"),
     path("add/", views.add, name="add"),
 ]
